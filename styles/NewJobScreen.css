@@ -1,0 +1,64 @@
+// New Job Screen CSS Document
+
+body{
+	display: block;
+ }
+ 
+ 
+header{
+	background-color: black;
+	height: 60px;
+	color: white;
+	display: flex;
+	align-items: center;
+	padding-left: 50px;
+}
+
+
+aside{
+	float: left;
+	background-color: WhiteSmoke;
+	width: 200px;
+	padding-top: 25px;
+	padding-left: 20px;
+	height: 700px;
+	font-size: 1.2em;
+}
+
+
+main{
+	float: left;
+	padding-left: 40px;
+	font-size: 1.2em;
+}
+
+
+input[type = text]{
+	width: 800px;
+	height: 25px;
+	margin-top: 10px;
+}
+
+
+input[name = jobDescription]{
+	width: 800px;
+	height: 50px;
+	margin-top: 10px;
+}
+
+
+input[type = submit]{
+	width: 200px;
+	height: 35px;
+	background-color: SteelBlue;
+	color: white;
+	text-align: center;
+	font-size: 0.8em;
+}
+
+
+select{
+	width: 800px;
+	height: 25px;
+	margin-top: 10px;
+}

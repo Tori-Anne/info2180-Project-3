@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles/login.css">
+    <title>Login</title>
+</head>
+<body>
+    <header>
+        <h1>Hire Me Login</h1>
+    </header>
+
+    <form class="container" action="script/login.php" name = "loginForm" onsubmit = "return validation()">
+        <div class="imgcontainer">
+            <img src="avatar.jpeg" alt="Image of login avatar" class="avatar"/ width ="250px">
+        </div>
+
+        <div class="container">
+            <label for="email-login"><b>Username </b></label>
+            <input type="text" name="email-login" required>
+            <br></br>
+            
+            <label for="pwrd"><b>Password</b></label>
+            <input type="password" name="pwrd" required> 
+            <br></br>
+            <input type="submit" name="loginButton" value="Login">
+            <br>
+        
+    </form>
+    
+</body>
+</html>
