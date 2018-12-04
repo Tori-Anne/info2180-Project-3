@@ -1,28 +1,70 @@
+<!-- Dashboard HTML Document -->
+
 <!DOCTYPE html>
+
 <html>
-    <head>
-        <title> Dashboard</title>
-        <link ref="stylesheet" type="text/css" href="dashboard.css">
-    </head>
-    <body>
-        <header> 
-            <h2>Hire Me</h2>
-        </header>
-        
-        <section>
-            <nav>
-               <ul>
-                   <li><a href="dashboard.html"><img src="home.png" alt="home logo">Home</a></li>
-                   <li><
-                   +6a href="#"><img src="addUser.png" alt="add user logo">Add User</a></li>
-                   <li><a href="#"><img src="newJob.png" alt="new job logo">New Job</a></li>
-                   <li><a href="#"><img src="logout.jpg" alt="logout logo">Logout</a></li>
-               </ul> 
-            </nav>
-            <article>
-                <h2>Dashboard <button>Post a job</button> </h2>
-                <h5>Available Jobs</h5>
-            </article>
-        </section>
-    </body>
+
+	<head>
+		<title> INFO2180 - Project 3 </title>
+		<meta charset = "utf-8"/>
+		<link href = "styles/NewUserCreationScreen.css" type = "text/css" rel = "stylesheet">
+		<script src = "scripts/NewUser.js" type = "text/javascript"> </script>
+	</head>
+
+	<body>
+	
+		<header>
+		
+			<h1> HireMe </h1>
+			
+		</header>
+	
+		<aside>
+		
+			<button><a href="dashboard.html"><img src = "home.png" alt = "Home" />
+			&ensp; Home</a></button>
+		
+			<br>
+			<br>
+			
+			<button><a href="NewUserCreationScreen.html"><img src = "addUser.png" alt = "addUser"/>
+			&ensp; Add User</a></button>
+			
+			<br>
+			<br>
+			
+			<button><a href="NewJobScreen.html"><img src = "newJob.png" alt = "newJob" />
+			&ensp; New Job</a></button>
+			<br>
+			<br>
+			
+			<button><a href="login.html"><img src = "logout.jpg" alt = "logout" />
+			&ensp; Logout</a></button>
+			
+		</aside>
+		
+	
+		<main>		
+			<h2> Dashboard</h2>
+			<table>
+			    <tr>
+			        <th>Company</th>
+			        <th>Job Title</th>
+			        <th>Category</th>
+			        <th>Date</th>
+			    </tr>
+			</table>
+			<h2>Jobs Applied For</h2>
+			<table>
+			    <tr>
+			        <th>Company</th>
+			        <th>Job Title</th>
+			        <th>Category</th>
+			        <th>Date Applied</th>
+			    </tr>
+			</table>
+		</main>
+	
+	</body>
+
 </html>

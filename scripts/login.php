@@ -23,8 +23,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     	
     	session_start();
     	
+    	session_register('username');
+    	session_register('password');
+
+    	
     	 $_SESSION['username'] = $email;
     	 $_SESSION['password'] = $hashedPassword;
+    	 
+    	 if (isset($_POST["loginButton"])){
+            header('Location : dashboard.html');
+    	 }
     	 
     	 
     }

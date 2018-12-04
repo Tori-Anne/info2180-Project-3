@@ -17,7 +17,7 @@ function validation(){
     
     function validateJobTitle(){
 		if (!jobTitle.value.match(alphaValue)){
-			alert("Invalid");
+			alert("Please enter a valid job title");
 			return false;
 		}			
 		else{
@@ -28,7 +28,7 @@ function validation(){
 	
 	function validateJobDescription(){
 		if (!jobDescription.value.match(alphaValue)){
-			alert("Invalid");
+			alert("Please enter a valid job description");
 			return false;
 		}			
 		else{
@@ -39,7 +39,7 @@ function validation(){
 	
 	function validateCompany(){
 		if (!company.value.match(alphaValue)){
-			alert("Invalid");
+			alert("Please enter a valid company");
 			return false;
 		}			
 		else{
@@ -50,7 +50,7 @@ function validation(){
 	
 	function validateJobLocation(){
 		if (!jobLocation.value.match(alphaValue)){
-			alert("Invalid");
+			alert("Please enter a valid job location");
 			return false;
 		}			
 		else{

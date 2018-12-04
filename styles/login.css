@@ -1,17 +1,12 @@
 form {
     border: 3px solid #f1f1f1;
+    display: inline;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    
     
 }
-
-
-header {
-
-    background:black;
-    color: white;
-    text-align: center;
-
-}
-
 
 input[type=text], input[type=password] {
     width: 100%;
@@ -35,6 +30,15 @@ input[type=submit] {
 
 
 
+header {
+
+    background:black;
+    color: white;
+    text-align: center;
+
+}
+
+
 .imgcontainer {
     text-align: center;
     margin: 24px 0 12px 0;
@@ -43,20 +47,20 @@ input[type=submit] {
 
 .avatar {
     width: 40%;
-    border-radius: 50%;
+    border-radius: 80%;
 }
 
 
 .container {
-    display:grid;
-    align-content: center;
+    display:block;
+    text-align:center;
     width: 50%;
     background-color: 	#D3D3D3;
     
 }
 
 body {
-    background-image:url("background.jpeg") ;
+    background-image:url("background.png") ;
     background-repeat: no-repeat;
     background-size: 100%;
 

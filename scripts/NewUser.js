@@ -20,7 +20,8 @@ function validation(){
 	
 	function validateFirstName(){
 		if (firstName.value == "" || !firstName.value.match(alphaValue)){
-			alert("Invalid");
+			alert("Please enter a valid first name");
+			firstName.focus();
 			return false;
 		}			
 		else{
@@ -31,7 +32,8 @@ function validation(){
 	
 	function validateLastName(){
 		if (lastName.value == "" || !lastName.value.match(alphaValue)){
-			alert("Invalid");
+			alert("Please enter a valid last name");
+			lastName.focus();
 			return false;
 		}			
 		else{
@@ -42,7 +44,8 @@ function validation(){
 	
 	function validatePassword(){
 		if (!Password.value.match(regExp)){
-			alert("Invalid");
+			alert("Please enter a valid password");
+			Password.focus();
 			return false;
 		}
 		else{
@@ -53,7 +56,8 @@ function validation(){
 		
 	function validateEmail(){
 		if (email.value == ""){
-			alert("Invalid");
+			alert("Please enter a valid email address");
+			email.focus();
 			return false;
 		}			
 		else{
@@ -64,13 +68,23 @@ function validation(){
 	
 	function validateTelephone(){
 		if (telephone.value == "" || isNaN(telephone)){
-			alert("Invalid");
+			alert("Please enter a valid telphone number");
+			telephone.focus();
 			return false;
 		}			
 		else{
 			return true;
 		}
 	}
+	
+	//still workimg on this
+	$.ajax({
+		type: 'post',
+		url: 'newuser.php',
+		data: {
+			//missing
+		}
+	},
 	
 	
 	

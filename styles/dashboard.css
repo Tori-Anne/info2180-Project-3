@@ -1,4 +1,36 @@
+/* Dashboard CSS Document */
+
+body{
+	display: block;
+ }
+ 
+ 
 header{
+	background-color: black;
+	height: 60px;
+	color: white;
+	display: flex;
+	align-items: center;
+	padding-left: 50px;
+}
+
+
+aside{
+	float: left;
+	background-color: WhiteSmoke;
+	width: 200px;
+	padding-top: 25px;
+	padding-left: 20px;
+	height: 700px;
+	font-size: 1.2em;
+}
+
+
+
+
+
+
+/* header{
     background-color: black;
     color: white;
     
@@ -32,3 +64,5 @@ button{
     background-color: green;
     color: white;
 }
+
+*/

@@ -10,7 +10,7 @@ function validation(){
 	
 	function validatePassword(){
 		if (password.value == ""){
-			alert("Invalid");
+			alert("Please enter a valid password");
 			return false;
 		}
 		else{
@@ -21,7 +21,7 @@ function validation(){
 		
 	function validateEmail(){
 		if (email.value == ""){
-			alert("Invalid");
+			alert("Please enter a valid email address");
 			return false;
 		}			
 		else{
