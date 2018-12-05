@@ -1,70 +1,102 @@
-<!-- Dashboard HTML Document -->
-
 <!DOCTYPE html>
-
 <html>
-
+	
 	<head>
-		<title> INFO2180 - Project 3 </title>
-		<meta charset = "utf-8"/>
-		<link href = "styles/NewUserCreationScreen.css" type = "text/css" rel = "stylesheet">
-		<script src = "scripts/NewUser.js" type = "text/javascript"> </script>
-	</head>
-
+		<title> Dashboard </title>
+		<link href = "styles/dashboard.css" type = "text/css" rel = "stylesheet">
+		<script src = "scripts/dashboard.js" type = "text/javascript"> </script>
 	<body>
+		
+	
+	</head>
 	
 		<header>
 		
 			<h1> HireMe </h1>
 			
 		</header>
-	
-		<aside>
 		
-			<button><a href="dashboard.html"><img src = "home.png" alt = "Home" />
-			&ensp; Home</a></button>
-		
-			<br>
-			<br>
+		<section>
+			<aside>
 			
-			<button><a href="NewUserCreationScreen.html"><img src = "addUser.png" alt = "addUser"/>
-			&ensp; Add User</a></button>
+				<img src = "home.png" alt = "Home" height = "25" weight = "25" />
+				&ensp; <a href = "dashboard.html"> Home </a>
 			
-			<br>
-			<br>
-			
-			<button><a href="NewJobScreen.html"><img src = "newJob.png" alt = "newJob" />
-			&ensp; New Job</a></button>
-			<br>
-			<br>
-			
-			<button><a href="login.html"><img src = "logout.jpg" alt = "logout" />
-			&ensp; Logout</a></button>
-			
-		</aside>
-		
-	
-		<main>		
-			<h2> Dashboard</h2>
-			<table>
-			    <tr>
-			        <th>Company</th>
-			        <th>Job Title</th>
-			        <th>Category</th>
-			        <th>Date</th>
-			    </tr>
-			</table>
-			<h2>Jobs Applied For</h2>
-			<table>
-			    <tr>
-			        <th>Company</th>
-			        <th>Job Title</th>
-			        <th>Category</th>
-			        <th>Date Applied</th>
-			    </tr>
-			</table>
-		</main>
-	
-	</body>
+				<br>
+				<br>
+				
+				<img src = "addUser.png" alt = "addUser" height = "25" weight = "25" />
+				&ensp; <a href = "NewUserCreationScreen.html"> Add User </a>
+				
+				<br>
+				<br>
+				
+				<img src = "newJob.png" alt = "newJob" height = "20" weight = "20" />
+				&ensp; <a href = "#"> New Job </a>
+				
+				<br>
+				<br>
+				
+				<img src = "logout.jpg" alt = "logout" height = "20" weight = "20" />
+				&ensp; <a href = "login.html"> Logout </a>
+				
+			</aside>
+			<article>
+				<div class="heading">
+					
+					<h1>
+						<strong> Dashboard</strong>
+						<!--<button>Post a Job</button>-->
+					</h1>
+					<h3>Available Jobs</h3>
+					<div id = "availableJobs"> </div>
+					<table>
+						<tr>
+							<th>Company</th>
+							<th>Job Title</th>
+							<th>Category</th>
+							<th>Date</th>
+						</tr>
+						<?php
 
+    						$conn = mysql_connect("localhost","root"," ","job_board");
+   							 if($conn-> connect_error){
+   							 	die("Connection failed: ". $conn-> connect_error);
+   							 } 
+   							 $sql="select company_name, job_title, category, date_posted from Jobs"; 
+   							 $result= $conn-> query($sql);
+    
+    						if($result-> num_rows >0){
+        					while($row= $result-> fetch_assoc()){
+           						 echo "<tr><td>". $row["company_name"]."</td><td>".$row["job_title"]."</td><td>".$row["category"]."</td><td>".$row["date_posted"]."</td></tr>";
+					        }
+					        echo "</table>";
+					   		 }
+					   		 else{
+					        echo "0 result";
+					   	 }
+					    $conn-> close();
+					?>
+					</table>
+					<h3>Jobs Applied For</h3>
+					<table>
+						<tr>
+							<th>Company</th>
+							<th>Job Title</th>
+							<th>Category</th>
+							<th>Date Applied</th>
+						</tr>
+					</table>
+				</div>
+
+				<div class="butt">
+					<button>Post a Job</button>
+				</div>
+			</article>
+		</section>
+	</body>	
+		
+		
+	
+	
 </html>

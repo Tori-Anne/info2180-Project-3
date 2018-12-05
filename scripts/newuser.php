@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 include('logout.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){

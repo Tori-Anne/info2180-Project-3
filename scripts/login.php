@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
     
     if (isset($_POST["loginButton"])){
@@ -21,27 +23,38 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     	}
     	
     	
-    	session_start();
-    	
-    	session_register('username');
-    	session_register('password');
+    	$host = getenv('IP');
+        $username = getenv('C9_USER');
+        $password = '';
+        $dbname = 'job_board';
 
-    	
-    	 $_SESSION['username'] = $email;
-    	 $_SESSION['password'] = $hashedPassword;
-    	 
-    	 if (isset($_POST["loginButton"])){
-            header('Location : dashboard.html');
-    	 }
-    	 
-    	 
+		$conn = new PDO("mysql:host=$host;dbname=job_board", $username, $password);
+        
+		// set the PDO error mode to exception
+		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    
+		$sql = "SELECT email, password FROM Users where email = '$email' and password = '$hashedPassword'";
+        
+		$result = $conn->query($sql);
+		
+		catch(PDOException $e){
+			echo "Connection failed: " . $e->getMessage();
+        }
+			
+		$array = $result->fetch(PDO::FETCH_ASSOC);
+			
+		if (($email = $array['email']) || ($hashedPassword = $array['password'])){
+		    header('Location : dashboard.html');
+		    session_register('username') = $email;
+            session_register('password') = $hashedPassword;
+		}
+		else{
+		    return false;
+		}
+		
+		
     }
 }
-
-
-    
-    
-    
-
+		
 
 ?>

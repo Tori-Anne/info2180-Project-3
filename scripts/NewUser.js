@@ -76,16 +76,18 @@ function validation(){
 			return true;
 		}
 	}
-	
-	//still workimg on this
+
+
+
+	/*
 	$.ajax({
 		type: 'post',
 		url: 'newuser.php',
 		data: {
-			//missing
 		}
 	},
 	
+	*/
 	
 	
 	
